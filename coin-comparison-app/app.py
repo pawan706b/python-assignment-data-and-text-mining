@@ -21,7 +21,7 @@ def fetch_coins_list():
 	if response.status_code == 200:
 		return pd.DataFrame(response.json())
 	elif response.status_code == 429:
-		time.sleep(2 ** i)
+		time.sleep(2)
 	else:
 		st.error(f'Failed to fetch coin list. Status Code: {response.status_code}')
 		return pd.DataFrame()
