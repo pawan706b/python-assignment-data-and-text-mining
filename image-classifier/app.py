@@ -4,7 +4,7 @@ from PIL import Image, ImageOps
 import numpy as np
 
 # Load the pre-trained model
-model = tf.keras.models.load_model('handwrittendigit.h5')
+model = tf.keras.models.load_model('./handwrittendigit.h5')
 
 def prepare_image_for_prediction(original_img):
     """Prepares an image for optimal prediction by the model."""
